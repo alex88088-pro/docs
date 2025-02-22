@@ -2,13 +2,7 @@
 
 # --------------------------------------------------------------------------------
 # BASE IMAGE
-# --------------------------------------------------------------------------------
-FROM node:19.1.0-alpine@sha256:c59fb39150e4a7ae14dfd42d3f9874398c7941784b73049c2d274115f00d36c8 as base
-
-# This directory is owned by the node user
-ARG APP_HOME=/home/node/app
-
-# Make sure we don't run anything as the root user
+user
 USER node
 
 WORKDIR $APP_HOME
